@@ -1,17 +1,12 @@
-import localFont from "next/font/local";
-import "./globals.css";
+import { Poppins, Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const poppins = Poppins({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+  style: ['normal', 'italic']
+})
 
 export const metadata = {
   title: "NextAdmin",
@@ -22,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50`}
+        className={`${poppins.className} antialiased bg-slate-50`}
       >
         <Navbar/>
         {children}
