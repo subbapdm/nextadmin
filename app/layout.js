@@ -1,12 +1,11 @@
-import { Poppins, Roboto } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
   weight: ['400', '500', '600'],
   subsets: ['latin'],
-  style: ['normal', 'italic']
-})
+  style: ['normal', 'italic'],
+});
 
 export const metadata = {
   title: "NextAdmin",
@@ -16,10 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.className} antialiased bg-slate-50`}
-      >
-        <Navbar/>
+      <body className={`${poppins.className} antialiased bg-slate-50`}>
         {children}
       </body>
     </html>
