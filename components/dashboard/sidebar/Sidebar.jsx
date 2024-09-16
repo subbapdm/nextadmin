@@ -94,26 +94,26 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className='bg-white w-80 h-screen border-r-[1px] border-slate-100'>
-      <div className='p-4'>
-        <Link href="/">
+    <aside className='bg-white h-full border-r-[1px] border-slate-100'>
+      <div className='p-4 hidden lg:block'>
+        <Link href="/dashboard">
           <Image src="/images/logo.png" width={150} height={100} alt='Logo' />
-          <span className='text-xs font-medium text-gray-500'>NextJs admin dashboard</span>
+          <span className='text-xs font-medium text-gray-400'>NextJs admin dashboard</span>
         </Link>
       </div>
 
-      <nav>
+      <nav className='py-4'>
         <ul>
 
           {menuItems.map((cat) => (
             <li key={cat.title}>
-              <span className='text-gray-400 text-[14px] uppercase pl-3'>{cat.title}</span>
-              <ul>
+              <span className='hidden lg:block uppercase text-sm text-gray-400 ml-2'>{cat.title}</span>
+              <ul className=''>
                 {cat.list.map((item) => (
-                  <li key={cat.title} className={`text-gray-600 font-medium hover:bg-cyan-50 hover:text-cyan-600 my-3 ${pathname === item.path ? 'text-cyan-600 bg-cyan-50 border-r-[3px] border-cyan-600' : ''}`}>
+                  <li key={item.title} className={`text-sm font-medium hover:bg-cyan-50 hover:text-cyan-600 my-3 ${pathname === item.path ? 'text-cyan-500 bg-cyan-50 border-r-[3px] border-cyan-500' : 'text-gray-500'}`}>
                     <Link href={`${item.path}`} className='flex text-md gap-1 p-3'>
                         <item.icon size={20} /> 
-                        <span>{item.title}</span>
+                        <span className='hidden lg:block'>{item.title}</span>
                     </Link>
                   </li>
                 ))}
@@ -122,6 +122,12 @@ const Sidebar = () => {
           ))}
          
         </ul>
+        <form className='px-2'>
+          <button className="flex gap-2 items-center justify-between text-white font-medium py-3 px-2 md:px-4 my-3 bg-cyan-300 rounded-md md:w-full w-max">
+              <span className="hidden lg:block">Logout</span>
+              <User size={20} />
+          </button>
+        </form>
       </nav>
     </aside>
   )
