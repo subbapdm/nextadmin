@@ -30,7 +30,7 @@ import ReactApexChart from "react-apexcharts";
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '60%',
+        columnWidth: '50%',
         borderRadius: 5,
         borderRadiusApplication: 'end', // 'around', 'end'
         borderRadiusWhenStacked: 'last', // 'all', 'last'
@@ -58,8 +58,16 @@ import ReactApexChart from "react-apexcharts";
       axisBorder: {
         show: false
       },
-      labels: {
+      axisTicks: {
         show: false
+      },
+      labels: {
+        show: true,
+        style: {
+          colors:  "#bbb",
+          fontSize: '12px',
+          fontWeight: 600,
+        },
       },
     },
     yaxis: {
@@ -67,38 +75,44 @@ import ReactApexChart from "react-apexcharts";
         show: false
       },
       labels: {
-        show: false
+        show: true,
+        style: {
+          colors:  "#bbb",
+          fontSize: '12px',
+          fontWeight: 600,
+        },
       },
     },
     grid: {
-      show: false,
+      show: true,
       borderColor: '#eee',
-      strokeDashArray: 3,
+      strokeDashArray: 4,
       position: 'back',
       xaxis: {
         lines: {
-          show: true
+          show: false
         },
       },
       yaxis: {
         lines: {
           show: true
         },
-      }
+      },
     },
     tooltip: {
+      enabled: true,
       shared: true,
-      intersect: false
+      intersect: false,
+      theme: false
     }
   }
 
-
-function Bar({ width, height }) {
+const Bar = ({ width, height }) => {
   return (
-    <div className="w-full">
-        <ReactApexChart options={options} series={options.series} type="bar" height={height} width={width} />
+    <div className="w-full p-4">
+        <ReactApexChart options={options} series={options.series} type="bar" height={height} width={width + "%"} />
     </div>
   )
 }
 
-export default Bar
+export default Bar;

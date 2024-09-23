@@ -1,0 +1,12 @@
+.apexcharts-tooltip {
+    background: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    text-align: center;
+  }
+
+.apexcharts-xaxistooltip.apexcharts-active {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: #fff;
+}

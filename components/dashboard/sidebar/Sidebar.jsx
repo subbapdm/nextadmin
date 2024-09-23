@@ -94,7 +94,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className='bg-white h-full border-r-[1px] border-slate-100'>
+    <aside className='bg-white h-screen border-r-[1px] border-slate-100'>
       <div className='p-4 hidden lg:block'>
         <Link href="/dashboard">
           <Image src="/images/logo.png" width={150} height={100} alt='Logo' />
@@ -123,7 +123,7 @@ const Sidebar = () => {
          
         </ul>
         <form className='px-2'>
-          <button className="flex gap-2 items-center justify-between text-white font-medium py-3 px-2 md:px-4 my-3 bg-cyan-300 rounded-md md:w-full w-max">
+          <button className="flex gap-2 items-center justify-between text-white font-medium py-3 px-2 md:px-4 my-3 bg-cyan-500 rounded-md md:w-full w-max">
               <span className="hidden lg:block">Logout</span>
               <User size={20} />
           </button>

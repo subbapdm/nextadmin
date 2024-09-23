@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.apexcharts-tooltip-title {
+    background: #004252;
+    color: #fff;
+    border: none;
+}
+
+.apexcharts-tooltip {
+    background: #003b48;
+    border: none;
+    color: #fff;
+}

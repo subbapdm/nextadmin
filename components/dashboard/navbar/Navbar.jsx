@@ -24,7 +24,7 @@ const DashboardNavbar = () => {
         </div>
 
         <div className='w-[300px] md:md:w-3/6 flex items-center border-[1px] border-gray-200 rounded-md py2 px-3'>
-            <button><Search size={20} /></button>
+            <button className='text-gray-300'><Search size={20} /></button>
             <input type='text' placeholder='Search here' className='w-full focus:outline-none focus:placeholder:text-transparent p-2' />
         </div>
         
