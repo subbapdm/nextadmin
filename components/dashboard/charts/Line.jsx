@@ -19,15 +19,6 @@ import ReactApexChart from "react-apexcharts";
     markers: {
       size: 0
     },
-    tooltip: {
-      fixed: {
-        enabled: true,
-        position: 'right'
-      },
-      x: {
-        show: false
-      }
-    },
     title: {
       show: false,
       text: undefined,
@@ -35,7 +26,20 @@ import ReactApexChart from "react-apexcharts";
         fontSize: '26px'
       }
     },
-    colors: ['#2dd4bf']
+    colors: ['#0891B2'],
+    tooltip: {
+      enabled: true,
+      shared: false,
+      intersect: false,
+      theme: false,
+      fixed: {
+        enabled: true,
+        position: 'right'
+      },
+      x: {
+        show: false
+      }
+    }
   }
 
 const Line = ({ width, height }) => {

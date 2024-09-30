@@ -39,14 +39,15 @@ import ReactApexChart from "react-apexcharts";
         useSeriesColors: false,
       },
       markers: {
-        size: 5
+        size: 6
       },
       itemMargin: {
         horizontal: 5,
         vertical: 5
       },
       
-    }
+    },
+    
   }
 
 const Pie = ({ width, height }) => {

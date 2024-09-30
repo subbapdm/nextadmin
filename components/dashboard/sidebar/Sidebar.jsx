@@ -15,7 +15,7 @@ import {
   Users, 
   Wallet
 } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import SidebarItem from './SidebarItem';
 
 const menuItems = [
   {
@@ -91,7 +91,6 @@ const menuItems = [
 ];
 
 const Sidebar = () => {
-  const pathname = usePathname();
 
   return (
     <aside className='bg-white h-screen border-r-[1px] border-slate-100'>
@@ -110,12 +109,7 @@ const Sidebar = () => {
               <span className='hidden lg:block uppercase text-sm text-gray-400 ml-2'>{cat.title}</span>
               <ul className=''>
                 {cat.list.map((item) => (
-                  <li key={item.title} className={`text-sm font-medium hover:bg-cyan-50 hover:text-cyan-600 my-3 ${pathname === item.path ? 'text-cyan-500 bg-cyan-50 border-r-[3px] border-cyan-500' : 'text-gray-500'}`}>
-                    <Link href={`${item.path}`} className='flex text-md gap-1 p-3'>
-                        <item.icon size={20} /> 
-                        <span className='hidden lg:block'>{item.title}</span>
-                    </Link>
-                  </li>
+                  <SidebarItem title={item.title} path={item.path} icon={item.icon}/>
                 ))}
               </ul>
             </li>
