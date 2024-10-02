@@ -75,9 +75,8 @@ const Dashboard = () => {
           
             <div className='p-4'>
               <h2 className='text-xl font-bold mb-2'>Latest Blogs</h2>
-            </div>
 
-            <div className='flex justify-beteween items-center gap-2 mb-3'>
+              <div className='flex justify-beteween items-center gap-2 mb-3'>
               <div className='w-12 h-12 relative overflow-hidden rounded-md'>
                 <Image
                     fill
@@ -121,8 +120,12 @@ const Dashboard = () => {
                 <p className='text-xs font-medium text-gray-400'>24 Oct, 2024</p>
               </div>
             </div>
+            </div>
+
+            
             
           </div>
+
           <div className='bg-white col-span-3 rounded-xl'>
 
             <div className='p-4'>
