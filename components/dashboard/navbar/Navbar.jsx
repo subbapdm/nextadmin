@@ -16,7 +16,7 @@ const DashboardNavbar = () => {
 
 
   return (
-    <nav className='w-full bg-white flex justify-between items-center gap-4 rounded-xl overflow-x-auto p-4'>
+    <nav className='w-full bg-white shadow-sm flex justify-between items-center gap-4 rounded-xl overflow-x-auto p-4'>
       <div className='w-full flex gap-4 items-center'>
 
         <div className='md:md:w-3/6'>

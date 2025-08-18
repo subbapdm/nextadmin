@@ -93,10 +93,10 @@ const menuItems = [
 const Sidebar = () => {
 
   return (
-    <aside className='bg-white h-screen border-r-[1px] border-slate-100'>
+    <aside className='bg-white h-screen shadow-sm'>
       <div className='p-4 hidden lg:block'>
         <Link href="/dashboard">
-          <Image src="/images/logo.png" width={150} height={100} alt='Logo' />
+          <Image src="/images/logo.png" width={150} height={100} alt='Logo' priority />
           <span className='text-xs font-medium text-gray-400'>NextJs admin dashboard</span>
         </Link>
       </div>
@@ -109,7 +109,7 @@ const Sidebar = () => {
               <span className='hidden lg:block uppercase text-sm text-gray-400 ml-2'>{cat.title}</span>
               <ul className=''>
                 {cat.list.map((item) => (
-                  <SidebarItem title={item.title} path={item.path} icon={item.icon}/>
+                  <SidebarItem key={item.path} title={item.title} path={item.path} icon={item.icon}/>
                 ))}
               </ul>
             </li>
