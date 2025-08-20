@@ -34,7 +34,7 @@ const Dashboard = () => {
             icon={Users}
             number="509600"
             percent="2.5"
-            variant="dark"
+            background="bg-gradient-to-br from-teal-500 to-teal-600"
           />
           <CardDefault
             title="Total revenue"
@@ -57,10 +57,11 @@ const Dashboard = () => {
         </div>
 
         <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-5">
-
           <div className="bg-white rounded-xl shadow-sm xl:col-span-2 2xl:col-span-1">
             <div className="p-4">
-              <h2 className="text-lg font-semibold text-gray-800 mb-1">Statistics</h2>
+              <h2 className="text-lg font-semibold text-gray-800 mb-1">
+                Statistics
+              </h2>
               <p className="text-sm text-gray-500">
                 Showing total visitors for the last 6 months
               </p>
@@ -71,7 +72,9 @@ const Dashboard = () => {
 
           <div className="bg-white rounded-xl shadow-sm">
             <div className="p-4">
-              <h2 className="text-lg font-semibold text-gray-800 mb-1">Pie Chart</h2>
+              <h2 className="text-lg font-semibold text-gray-800 mb-1">
+                Pie Chart
+              </h2>
               <p className="text-sm text-gray-500">
                 Showing total visitors for the last 6 months
               </p>
@@ -81,7 +84,9 @@ const Dashboard = () => {
 
           <div className="bg-white rounded-xl shadow-sm">
             <div className="p-4">
-              <h2 className="text-lg font-semibold text-gray-800 mb-1">Pie Chart</h2>
+              <h2 className="text-lg font-semibold text-gray-800 mb-1">
+                Pie Chart
+              </h2>
               <p className="text-sm text-gray-500">
                 Showing total visitors for the last 6 months
               </p>
@@ -89,13 +94,14 @@ const Dashboard = () => {
             <Pie width={100} height="100" />
           </div>
         </div>
-
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
         <div className="bg-white rounded-xl shadow-sm col-span-3">
           <div className="p-4">
-            <h2 className="text-lg font-semibold text-gray-800 mb-1">Pie Chart</h2>
+            <h2 className="text-lg font-semibold text-gray-800 mb-1">
+              Pie Chart
+            </h2>
             <p className="text-sm text-gray-500">
               Showing total visitors for the last 6 months
             </p>
@@ -105,7 +111,9 @@ const Dashboard = () => {
         </div>
         <div className="bg-white rounded-xl shadow-sm col-span-2">
           <div className="p-4">
-            <h2 className="text-lg font-semibold text-gray-800 mb-1">Pie Chart</h2>
+            <h2 className="text-lg font-semibold text-gray-800 mb-1">
+              Pie Chart
+            </h2>
             <p className="text-sm text-gray-500">
               Showing total visitors for the last 6 months
             </p>
@@ -187,7 +195,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-				<div className="flex justify-beteween items-center gap-2 mb-3">
+            <div className="flex justify-beteween items-center gap-2 mb-3">
               <div className="w-[60px] h-[60px] relative overflow-hidden rounded-md">
                 <Image
                   fill
@@ -205,7 +213,7 @@ const Dashboard = () => {
                 </p>
               </div>
             </div>
-				<div className="flex justify-beteween items-center gap-2 mb-3">
+            <div className="flex justify-beteween items-center gap-2 mb-3">
               <div className="w-[60px] h-[60px] relative overflow-hidden rounded-md">
                 <Image
                   fill

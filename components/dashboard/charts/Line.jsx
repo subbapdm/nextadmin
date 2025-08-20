@@ -26,7 +26,7 @@ import ReactApexChart from "react-apexcharts";
         fontSize: '26px'
       }
     },
-    colors: ['#0891B2'],
+    colors: ['#0ea5e9'],
     tooltip: {
       enabled: true,
       shared: false,

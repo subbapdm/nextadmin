@@ -26,11 +26,7 @@ const menuItems = [
               path: "/dashboard",
               icon: LayoutGrid
           },
-          {
-              title: "User",
-              path: "/dashboard/users",
-              icon: User
-          },
+          
           {
               title: "Products",
               path: "/dashboard/products",
@@ -40,6 +36,11 @@ const menuItems = [
               title: "Posts",
               path: "/dashboard/posts",
               icon: StickyNote
+          },
+          {
+              title: "User",
+              path: "/dashboard/users",
+              icon: User
           },
           {
               title: "Transactions",

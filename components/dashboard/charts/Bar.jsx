@@ -32,7 +32,7 @@ const options = {
   plotOptions: {
     bar: {
       horizontal: false,
-      columnWidth: "50%",
+      columnWidth: "70%",
       borderRadius: 5,
       borderRadiusApplication: "end", // 'around', 'end'
       borderRadiusWhenStacked: "last", // 'all', 'last'
@@ -47,7 +47,7 @@ const options = {
       },
     },
   },
-  colors: ["#0891B2", "#CAFAFF"],
+  colors: ["#0ea5e9", "#CAFAFF"],
   series: [
     {
       name: "Sales",
@@ -69,9 +69,9 @@ const options = {
     labels: {
       show: true,
       style: {
-        colors: "#bbb",
-        fontSize: "12px",
-        fontWeight: 600,
+        colors: "#555",
+        fontSize: "13px",
+        fontWeight: 500,
       },
     },
   },
@@ -82,15 +82,15 @@ const options = {
     labels: {
       show: true,
       style: {
-        colors: "#bbb",
-        fontSize: "12px",
-        fontWeight: 600,
+        colors: "#555",
+        fontSize: "13px",
+        fontWeight: 500,
       },
     },
   },
   grid: {
     show: true,
-    borderColor: "#eee",
+    borderColor: "#f1f5f9",
     strokeDashArray: 4,
     position: "back",
     xaxis: {

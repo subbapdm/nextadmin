@@ -15,7 +15,7 @@ var options = {
       },
     },
   },
-  colors: ["#eee", "#0891B2", "#2dd4bf"],
+  colors: ["#eee", "#0ea5e9", "#2dd4bf"],
   title: {
     text: undefined,
   },
