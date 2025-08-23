@@ -210,4 +210,15 @@ export const blogPosts = [
     image: "https://images.unsplash.com/photo-1621703455854-050a995b6d10?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     createdAt: "2025-08-18T07:10:00Z",
   },
+   {
+    id: 6,
+    title: "Understanding Node.js Event Loop",
+    author: "Jane Smith",
+    content:
+      "Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. In this post, we dive deep into the event loop and asynchronous programming concepts.",
+    category: "Backend Development",
+    tags: ["Node.js", "JavaScript", "Backend"],
+    image: "https://images.unsplash.com/photo-1619410283995-43d9134e7656?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    createdAt: "2025-08-05T09:00:00Z",
+  },
 ];

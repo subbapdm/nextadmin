@@ -14,12 +14,12 @@ const Posts = () => {
   }, []);
 
   const columns = [
-        {
+    {
       key: "image",
       label: "Image",
-      render: (product) => (
-        <div className="p-4">
-            <Image src={product.image} width={100} height={100} class="max-w-full max-h-full rounded-md" alt="Apple Watch" />
+      render: (post) => (
+        <div className="min-w-lg">
+            <Image src={post.image} width={100} height={100} className="max-w-full max-h-full rounded-md" alt={post.title} />
         </div>
       )
     },
@@ -38,6 +38,17 @@ const Posts = () => {
       )
     },
     { key: 'category', label: 'Category' },
+    { 
+        key: 'tags', 
+        label: 'Tags',
+        render: (post) => (
+            post.tags.map((tag, index) => (
+                <span key={tag-index} className='py-1 px-2 m-1 rounded-md text-[9px] border-[1px]'>
+                    {tag}
+                </span>
+            ))
+        )
+    },
     { key: 'createdAt', label: 'Created at'}
   ];
 
