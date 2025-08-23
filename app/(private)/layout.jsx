@@ -6,7 +6,7 @@ const DashboardLayout = ({ children }) => {
   return (
     <div className="flex justify-between min-h-screen relative">
 
-      <div className='w-max lg:w-80 h-full'>
+      <div className='bg-white w-max lg:w-80'>
           <Sidebar/>
       </div>
 

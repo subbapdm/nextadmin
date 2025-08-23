@@ -28,7 +28,7 @@ const Dashboard = () => {
   return (
     <div className="w-full flex flex-col gap-5">
       <div className="grid grid-cols-1 gap-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-4 gap-5">
           <CardDefault
             title="Total customer"
             icon={Users}

@@ -1,6 +1,6 @@
 "use client"
 
-import { Eye, Pencil, Trash } from "lucide-react";
+import { Check, Eye, Pencil, Trash } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react"
 
@@ -51,14 +51,26 @@ const DynamicTable = ({ columns, data }) => {
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th className="w-4 p-3 text-sm font-semibold tracking-wide text-left">
-                            <input type="checkbox" checked={selectedItems.length === data.length} onChange={() => {
-                                if(selectedItems.length === data.length){
-                                    setSelectedItems([]);
-                                } else {
-                                    setSelectedItems(data.map( item => item.id ));
-                                }
-                            }} id="check-all" className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-2 focus:ring-blue-500 cursor-pointer" />
-                            <label htmlFor="check-all" className="sr-only">Checkbox</label>
+
+                            <label className="flex items-center cursor-pointer relative" htmlFor="check-all">
+                                <input 
+                                    type="checkbox" 
+                                    checked={selectedItems.length === data.length} 
+                                    onChange={() => {
+                                        if(selectedItems.length === data.length){
+                                            setSelectedItems([]);
+                                        } else {
+                                            setSelectedItems(data.map( item => item.id ));
+                                        }
+                                    }} 
+                                    id="check-all" 
+                                    className="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-blue-500 checked:border-blue-500" 
+                                />
+                                <span className="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <Check size={15} />
+                                </span>
+                            </label>
+                            
                         </th>
 
                         {columns.map((column) => (
@@ -75,13 +87,22 @@ const DynamicTable = ({ columns, data }) => {
                     {paginatedData.map((row, rowIndex) => (
                         <tr key={row.id || rowIndex} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td className="p-3 text-md text-gray-400">
-                                <input type="checkbox" checked={selectedItems.includes(row.id)}
-                                    onChange={() => handleItemSelection(row.id)}
-                                    id="check-all"
-                                    className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
-                                />
-                                <label htmlFor="check-all" className="sr-only">Checkbox</label>
+                                
+                                <label className="flex items-center cursor-pointer relative" htmlFor={`check-item-${rowIndex}`}>
+                                    <input 
+                                        type="checkbox"
+                                        checked={selectedItems.includes(row.id)}
+                                        onChange={() => handleItemSelection(row.id)}
+                                        className="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-blue-500 checked:border-blue-500"
+                                        id={`check-item-${rowIndex}`} 
+                                    />
+                                    <span className="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                        <Check size={15} />
+                                    </span>
+                                </label>
+                                
                             </td>
+                            
                             {columns.map((column) => (
                                 <td key={column.key} className="p-3 text-sm text-gray-500">
                                     {column.render ? (
