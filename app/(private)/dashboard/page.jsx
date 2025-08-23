@@ -60,7 +60,7 @@ const Dashboard = () => {
           <div className="bg-white rounded-xl shadow-sm xl:col-span-2 2xl:col-span-1">
             <div className="p-4">
               <h2 className="text-lg font-semibold text-gray-800 mb-1">
-                Statistics
+                Products
               </h2>
               <p className="text-sm text-gray-500">
                 Showing total visitors for the last 6 months

@@ -94,7 +94,7 @@ const menuItems = [
 const Sidebar = () => {
 
   return (
-    <aside className='bg-white h-screen shadow-sm'>
+    <aside className='bg-white h-full shadow-sm'>
       <div className='p-4 hidden lg:block'>
         <Link href="/dashboard">
           <Image src="/images/logo.png" width={150} height={100} alt='Logo' priority />

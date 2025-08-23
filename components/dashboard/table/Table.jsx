@@ -36,6 +36,7 @@ const Table = ({ products }) => {
           </div>
         </div>
       )}
+
       <table className="w-full divide-y divide-gray-100">
         <thead className="bg-gray-50 text-md text-gray-500 dark:bg-gray-700 dark:text-gray-400">
           <tr>
@@ -88,9 +89,11 @@ const Table = ({ products }) => {
                 </div>
               </td>
               <td className="p-3 text-sm text-gray-400">${product.price}</td>
+
               <td className="p-3 text-[12px] text-gray-400 hidden lg:table-cell">
                 <span className={`py-1 px-2 font-medium rounded-md bg-opacity-50 ${product.stock <= 0 ? 'bg-gray-200 text-[11px]' : product.stock <= 5  ? 'text-gray-600' : 'border-[1px] border-gray-200 text-gray-600'}`}>{product.stock <= 0 ? 'Out of stock' : product.stock <= 5 ? 'Limited' : 'In stock'}</span>
               </td>
+              
               <td className="p-3 text-sm text-gray-400">{product.createdAt}</td>
               <td className="p-3 text-xs text-gray-400 hidden lg:table-cell">
                 {/* This is just a sample column to show the increase and decrease case */}
