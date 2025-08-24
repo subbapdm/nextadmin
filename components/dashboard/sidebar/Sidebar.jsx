@@ -91,11 +91,11 @@ const menuItems = [
   }
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ sidebarOpen }) => {
 
   return (
     <aside className='h-full shadow-sm'>
-      <div className='p-4 hidden lg:block'>
+      <div className={`p-4 ${sidebarOpen ? 'opacity-100 lg:block' : 'opacity-0 hidden'}`}>
         <Link href="/dashboard">
           <Image src="/images/logo.png" width={150} height={100} alt='Logo' priority />
           <span className='text-xs font-medium text-gray-400'>NextJs admin dashboard</span>
@@ -107,10 +107,10 @@ const Sidebar = () => {
 
           {menuItems.map((cat) => (
             <li key={cat.title}>
-              <span className='hidden lg:block uppercase text-sm text-gray-400 ml-2'>{cat.title}</span>
+              <span className={`hidden lg:block uppercase text-sm text-gray-400 ml-2 ${sidebarOpen ? '' : 'lg:hidden'}`}>{cat.title}</span>
               <ul className=''>
                 {cat.list.map((item) => (
-                  <SidebarItem key={item.path} title={item.title} path={item.path} icon={item.icon}/>
+                  <SidebarItem key={item.path} sidebarOpen={sidebarOpen} title={item.title} path={item.path} icon={item.icon}/>
                 ))}
               </ul>
             </li>
@@ -121,7 +121,7 @@ const Sidebar = () => {
 
       <form className='px-2'>
         <button className="flex gap-2 items-center justify-between text-white font-medium py-3 px-2 md:px-4 my-3 bg-cyan-500 rounded-md md:w-full w-max">
-            <span className="hidden lg:block">Logout</span>
+            <span className={`hidden lg:block ${sidebarOpen ? '' : 'lg:hidden'}`}>Logout</span>
             <User size={20} />
         </button>
       </form>

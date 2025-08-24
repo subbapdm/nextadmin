@@ -2,11 +2,11 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react'
-import { BellRing, MessageSquare, MoonStar, Search, Settings, SunMoon } from 'lucide-react';
+import { BellRing, MessageSquare, MoonStar, Search, Settings, SunMoon, Text } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
-const DashboardNavbar = () => {
+const DashboardNavbar = ({ onToggle }) => {
   const[darkMode, setDarkMode] = useState(false);
 
   const pathname = usePathname();
@@ -14,10 +14,13 @@ const DashboardNavbar = () => {
   const currentPage = match && match[1] ? match[1] : 'dashboard';
   const title = currentPage.charAt(0).toUpperCase() + currentPage.slice(1);
 
-
   return (
     <nav className='w-full bg-white shadow-sm flex justify-between items-center gap-4 rounded-xl overflow-x-auto p-4'>
       <div className='w-full flex gap-4 items-center'>
+
+        <button onClick={onToggle} className='h-10 w-10 p-2.5 hover:bg-blue-100 rounded-full'>
+          <Text size={20} />
+        </button>
 
         <div className='md:md:w-3/6'>
           <h1 className='text-xl font-bold text-slate-700'>{title}</h1>

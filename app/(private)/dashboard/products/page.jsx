@@ -3,7 +3,6 @@
 import DynamicTable from '@/components/dashboard/table/DynamicTable'
 import { products } from '@/data/data'
 import { TrendingDown, TrendingUp } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
